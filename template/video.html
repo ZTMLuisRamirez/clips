@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clipz Template</title>
+
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/@videojs/themes@1/dist/forest/index.css" rel="stylesheet" />
+  <link href="custom.css" rel="stylesheet">
+</head>
+<body class="bg-main text-gray-200">
+  <!-- Header -->
+  <header id="header" class="bg-secondary">
+    <nav class="container mx-auto flex justify-start items-center py-8 px-4">
+      <!-- App Name -->
+      <a class="text-3xl text-indigo-400 font-bold uppercase mr-4" href="index.html">Clipz</a>
+
+      <div class="flex flex-grow items-center">
+        <!-- Primary Navigation -->
+        <ul class="flex flex-row mt-1">
+          <!-- Navigation Links -->
+          <li>
+            <a class="px-2" href="#">Login / Register</a>
+          </li>
+          <li>
+            <a class="px-2" href="#">Manage</a>
+          </li>
+          <li>
+            <a class="px-2" href="#">Upload</a>
+          </li>
+          <li>
+            <a class="px-2" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- Main Content -->
+  <section class="container mx-auto my-8 bg-secondary p-6">
+    <div class="rounded relative flex flex-col">
+      <!-- Title and Uploader -->
+      <h1 class="font-bold mb-2 text-3xl">Video Title</h1>
+      <div class="text-gray-400 mb-6">
+        Uploaded By Luis on
+        <span>March 25, 2022</span>
+      </div>
+
+      <!-- Video Editor -->
+      <div class="relative">
+        <!-- Video Player -->
+        <video controls 
+          class="video-js vjs-theme-forest mx-auto"
+          data-setup="{}">
+          <source src="assets/video/hero.webm" type="video/webm">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- More Clips -->
+  <div class="container mx-auto my-8">
+    <h2 class="mt-6 text-2xl">More Clips</h2>
+
+    <!-- Video List -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <a href="#"
+        class="mt-6 rounded-tl-2xl rounded-br-2xl shadow-xl bg-secondary transform hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+  
+        <!-- Image -->
+        <img class="card-img-top rounded-tl-2xl w-full" src="assets/img/1.jpg">
+  
+        <!-- Shape -->
+        <div class="relative">
+          <div class="absolute pointer-events-none bottom-full w-full bg-secondary text-white">
+            <div class="absolute bottom-full w-full pb-5 overflow-hidden">
+              <svg viewBox="0 0 100 50" preserveAspectRatio="none" class="absolute bottom-0 w-full h-full tranform"
+                style="transform-origin: top center; transform: scale(2);">
+                <path d="M0 25h25L75 0h25v50H0z" fill="#283046"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Body -->
+        <div class="p-8">
+  
+          <!-- Heading -->
+          <h2 class="text-3xl mb-2">
+            Game Highlighting Clip
+          </h2>
+
+          <!-- Name & Date -->
+          <p class="mb-0">
+            Luis Ramirez &#183; 
+            <span class="text-gray-400">March 31, 2020</span>
+          </p>
+  
+        </div>
+  
+      </a>
+      <a href="#"
+        class="mt-6 rounded-tl-2xl rounded-br-2xl shadow-xl bg-secondary transform hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+  
+        <!-- Image -->
+        <img class="card-img-top rounded-tl-2xl w-full" src="assets/img/2.jpg">
+  
+        <!-- Shape -->
+        <div class="relative">
+          <div class="absolute pointer-events-none bottom-full w-full bg-secondary text-white">
+            <div class="absolute bottom-full w-full pb-5 overflow-hidden">
+              <svg viewBox="0 0 100 50" preserveAspectRatio="none" class="absolute bottom-0 w-full h-full tranform"
+                style="transform-origin: top center; transform: scale(2);">
+                <path d="M0 25h25L75 0h25v50H0z" fill="#283046"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Body -->
+        <div class="p-8">
+  
+          <!-- Heading -->
+          <h2 class="text-3xl mb-2">
+            Game Highlighting Clip
+          </h2>
+
+          <!-- Name & Date -->
+          <p class="mb-0">
+            Luis Ramirez &#183; 
+            <span class="text-gray-400">March 31, 2020</span>
+          </p>
+  
+        </div>
+  
+      </a>
+      <a href="#"
+        class="mt-6 rounded-tl-2xl rounded-br-2xl shadow-xl bg-secondary transform hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+  
+        <!-- Image -->
+        <img class="card-img-top rounded-tl-2xl w-full" src="assets/img/3.jpg">
+  
+        <!-- Shape -->
+        <div class="relative">
+          <div class="absolute pointer-events-none bottom-full w-full bg-secondary text-white">
+            <div class="absolute bottom-full w-full pb-5 overflow-hidden">
+              <svg viewBox="0 0 100 50" preserveAspectRatio="none" class="absolute bottom-0 w-full h-full tranform"
+                style="transform-origin: top center; transform: scale(2);">
+                <path d="M0 25h25L75 0h25v50H0z" fill="#283046"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Body -->
+        <div class="p-8">
+  
+          <!-- Heading -->
+          <h2 class="text-3xl mb-2">
+            Game Highlighting Clip
+          </h2>
+
+          <!-- Name & Date -->
+          <p class="mb-0">
+            Luis Ramirez &#183; 
+            <span class="text-gray-400">March 31, 2020</span>
+          </p>
+  
+        </div>
+  
+      </a>
+    </div>
+  </div>
+
+  <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+</body>
+</html>

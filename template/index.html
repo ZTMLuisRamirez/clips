@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clipz Template</title>
+
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="custom.css" rel="stylesheet">
+</head>
+<body class="text-gray-200">
+  <!-- Header -->
+  <header id="header" class="bg-secondary">
+    <nav class="container mx-auto flex justify-start items-center py-8 px-4">
+      <!-- App Name -->
+      <a class="text-3xl text-indigo-400 font-bold uppercase mr-4" href="index.html">Clipz</a>
+
+      <div class="flex flex-grow items-center">
+        <!-- Primary Navigation -->
+        <ul class="flex flex-row mt-1">
+          <!-- Navigation Links -->
+          <li>
+            <a class="px-2" href="#">Login / Register</a>
+          </li>
+          <li>
+            <a class="px-2" href="#">Manage</a>
+          </li>
+          <li>
+            <a class="px-2" href="#">Upload</a>
+          </li>
+          <li>
+            <a class="px-2" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Intro Section -->
+  <section class="relative overflow-hidden mb-2"> 
+    <!-- The video -->
+    <video autoplay muted loop class="w-full h-full object-cover absolute z-0">
+      <source src="assets/video/hero.webm" type="video/webm">
+    </video>
+
+    <div class="bg-gradient absolute w-full h-full z-40 opacity-60"></div>
+
+    <div class="w-full h-full absolute z-40">
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div class="cube"></div>
+    </div>
+
+    <div class="container mx-auto relative z-50">
+      <div class="text-center px-20 py-60 w-full md:w-8/12 mx-auto">
+        <h1 class="text-7xl font-bold uppercase mb-2">Clip it and ship it!</h1>
+        <p>
+          The #1 app to watch, clip, and share your awesome gaming moments
+          with your friends and the world! With our world-class tools, we make
+          it incredibly easy to share your videos. Get started today!
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Main Content -->
+  <section class="container mx-auto">
+    <h1 class="uppercase text-center text-4xl grid mt-20 mb-12 items-center gap-8 tracking-widest latest">Latest</h1>
+
+    <!-- Clips List -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <a href="#"
+        class="mt-6 rounded-tl-2xl rounded-br-2xl shadow-xl bg-secondary transform hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+  
+        <!-- Image -->
+        <img class="card-img-top rounded-tl-2xl w-full" src="assets/img/1.jpg">
+  
+        <!-- Shape -->
+        <div class="relative">
+          <div class="absolute pointer-events-none bottom-full w-full bg-secondary text-white">
+            <div class="absolute bottom-full w-full pb-5 overflow-hidden">
+              <svg viewBox="0 0 100 50" preserveAspectRatio="none" class="absolute bottom-0 w-full h-full tranform"
+                style="transform-origin: top center; transform: scale(2);">
+                <path d="M0 25h25L75 0h25v50H0z" fill="#283046"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Body -->
+        <div class="p-8">
+  
+          <!-- Heading -->
+          <h2 class="text-3xl mb-2">
+            Game Highlighting Clip
+          </h2>
+
+          <!-- Name & Date -->
+          <p class="mb-0">
+            Luis Ramirez &#183; 
+            <span class="text-gray-400">March 31, 2020</span>
+          </p>
+  
+        </div>
+  
+      </a>
+      <a href="#"
+        class="mt-6 rounded-tl-2xl rounded-br-2xl shadow-xl bg-secondary transform hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+  
+        <!-- Image -->
+        <img class="card-img-top rounded-tl-2xl w-full" src="assets/img/2.jpg">
+  
+        <!-- Shape -->
+        <div class="relative">
+          <div class="absolute pointer-events-none bottom-full w-full bg-secondary text-white">
+            <div class="absolute bottom-full w-full pb-5 overflow-hidden">
+              <svg viewBox="0 0 100 50" preserveAspectRatio="none" class="absolute bottom-0 w-full h-full tranform"
+                style="transform-origin: top center; transform: scale(2);">
+                <path d="M0 25h25L75 0h25v50H0z" fill="#283046"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Body -->
+        <div class="p-8">
+  
+          <!-- Heading -->
+          <h2 class="text-3xl mb-2">
+            Game Highlighting Clip
+          </h2>
+
+          <!-- Name & Date -->
+          <p class="mb-0">
+            Luis Ramirez &#183; 
+            <span class="text-gray-400">March 31, 2020</span>
+          </p>
+  
+        </div>
+  
+      </a>
+      <a href="#"
+        class="mt-6 rounded-tl-2xl rounded-br-2xl shadow-xl bg-secondary transform hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+  
+        <!-- Image -->
+        <img class="card-img-top rounded-tl-2xl w-full" src="assets/img/3.jpg">
+  
+        <!-- Shape -->
+        <div class="relative">
+          <div class="absolute pointer-events-none bottom-full w-full bg-secondary text-white">
+            <div class="absolute bottom-full w-full pb-5 overflow-hidden">
+              <svg viewBox="0 0 100 50" preserveAspectRatio="none" class="absolute bottom-0 w-full h-full tranform"
+                style="transform-origin: top center; transform: scale(2);">
+                <path d="M0 25h25L75 0h25v50H0z" fill="#283046"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Body -->
+        <div class="p-8">
+  
+          <!-- Heading -->
+          <h2 class="text-3xl mb-2">
+            Game Highlighting Clip
+          </h2>
+
+          <!-- Name & Date -->
+          <p class="mb-0">
+            Luis Ramirez &#183; 
+            <span class="text-gray-400">March 31, 2020</span>
+          </p>
+  
+        </div>
+  
+      </a>
+      <a href="#"
+        class="mt-6 rounded-tl-2xl rounded-br-2xl shadow-xl bg-secondary transform hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+  
+        <!-- Image -->
+        <img class="card-img-top rounded-tl-2xl w-full" src="assets/img/2.jpg">
+  
+        <!-- Shape -->
+        <div class="relative">
+          <div class="absolute pointer-events-none bottom-full w-full bg-secondary text-white">
+            <div class="absolute bottom-full w-full pb-5 overflow-hidden">
+              <svg viewBox="0 0 100 50" preserveAspectRatio="none" class="absolute bottom-0 w-full h-full tranform"
+                style="transform-origin: top center; transform: scale(2);">
+                <path d="M0 25h25L75 0h25v50H0z" fill="#283046"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Body -->
+        <div class="p-8">
+  
+          <!-- Heading -->
+          <h2 class="text-3xl mb-2">
+            Game Highlighting Clip
+          </h2>
+
+          <!-- Name & Date -->
+          <p class="mb-0">
+            Luis Ramirez &#183; 
+            <span class="text-gray-400">March 31, 2020</span>
+          </p>
+  
+        </div>
+  
+      </a>
+      <a href="#"
+        class="mt-6 rounded-tl-2xl rounded-br-2xl shadow-xl bg-secondary transform hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+  
+        <!-- Image -->
+        <img class="card-img-top rounded-tl-2xl w-full" src="assets/img/3.jpg">
+  
+        <!-- Shape -->
+        <div class="relative">
+          <div class="absolute pointer-events-none bottom-full w-full bg-secondary text-white">
+            <div class="absolute bottom-full w-full pb-5 overflow-hidden">
+              <svg viewBox="0 0 100 50" preserveAspectRatio="none" class="absolute bottom-0 w-full h-full tranform"
+                style="transform-origin: top center; transform: scale(2);">
+                <path d="M0 25h25L75 0h25v50H0z" fill="#283046"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Body -->
+        <div class="p-8">
+  
+          <!-- Heading -->
+          <h2 class="text-3xl mb-2">
+            Game Highlighting Clip
+          </h2>
+
+          <!-- Name & Date -->
+          <p class="mb-0">
+            Luis Ramirez &#183; 
+            <span class="text-gray-400">March 31, 2020</span>
+          </p>
+  
+        </div>
+  
+      </a>
+      <a href="#"
+        class="mt-6 rounded-tl-2xl rounded-br-2xl shadow-xl bg-secondary transform hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+  
+        <!-- Image -->
+        <img class="card-img-top rounded-tl-2xl w-full" src="assets/img/1.jpg">
+  
+        <!-- Shape -->
+        <div class="relative">
+          <div class="absolute pointer-events-none bottom-full w-full bg-secondary text-white">
+            <div class="absolute bottom-full w-full pb-5 overflow-hidden">
+              <svg viewBox="0 0 100 50" preserveAspectRatio="none" class="absolute bottom-0 w-full h-full tranform"
+                style="transform-origin: top center; transform: scale(2);">
+                <path d="M0 25h25L75 0h25v50H0z" fill="#283046"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Body -->
+        <div class="p-8">
+  
+          <!-- Heading -->
+          <h2 class="text-3xl mb-2">
+            Game Highlighting Clip
+          </h2>
+
+          <!-- Name & Date -->
+          <p class="mb-0">
+            Luis Ramirez &#183; 
+            <span class="text-gray-400">March 31, 2020</span>
+          </p>
+  
+        </div>
+  
+      </a>
+    </div>
+  </section>
+  
+  <!-- Auth Modal -->
+  <div class="fixed z-50 inset-0 overflow-y-auto hidden" id="modal">
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center 
+      sm:block sm:p-0">
+      <!-- Modal BG Overlay -->
+      <div class="fixed inset-0 transition-opacity">
+        <div class="absolute inset-0 bg-gray-800 opacity-75"></div>
+      </div>
+
+      <!-- This element is to trick the browser into centering the modal contents. -->
+      <span class="hidden sm:inline-block sm:align-middle sm:h-screen">&#8203;</span>
+
+      <div class="inline-block align-bottom bg-secondary rounded-lg text-left overflow-hidden
+        shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+
+        <!-- Add margin if you want to see some of the overlay behind the modal-->
+        <div class="py-4 text-left px-6">
+          <!--Title-->
+          <div class="flex justify-between items-center pb-4">
+            <p class="text-2xl font-bold">Your Account</p>
+            <!-- Modal Close Button -->
+            <div class="modal-close cursor-pointer z-50">
+              &#x2715;
+            </div>
+          </div>
+
+          <!-- Tabs -->
+          <ul class="flex flex-wrap mb-4">
+            <li class="flex-auto text-center">
+              <a class="block rounded py-3 px-4 transition hover:text-white text-white
+                bg-indigo-400" href="#">Login</a>
+            </li>
+            <li class="flex-auto text-center">
+              <a class="block rounded py-3 px-4 transition hover:text-indigo-400" 
+                href="#">Register</a>
+            </li>
+          </ul>
+
+          <!-- Login Form -->
+          <form>
+            <!-- Email -->
+            <div class="mb-3">
+              <label class="inline-block mb-2">Email</label>
+              <input type="email"
+                class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition
+                  duration-500 focus:outline-none rounded bg-transparent
+                  focus:border-indigo-400"
+                placeholder="Enter Email" />
+            </div>
+            <!-- Password -->
+            <div class="mb-3">
+              <label class="inline-block mb-2">Password</label>
+              <input type="password"
+                class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition
+                duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400"
+                placeholder="Password" />
+            </div>
+            <button type="submit"
+              class="block w-full bg-indigo-400 text-white py-1.5 px-3 rounded transition
+                hover:bg-indigo-500">
+              Submit
+            </button>
+          </form>
+          <!-- Registration Form -->
+          <form>
+            <!-- Name -->
+            <div class="mb-3">
+              <label class="inline-block mb-2">Name</label>
+              <input type="text"
+                class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition
+                  duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400"
+                placeholder="Enter Name" />
+            </div>
+            <!-- Email -->
+            <div class="mb-3">
+              <label class="inline-block mb-2">Email</label>
+              <input type="email"
+                class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition
+                  duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400"
+                placeholder="Enter Email" />
+            </div>
+            <!-- Age -->
+            <div class="mb-3">
+              <label class="inline-block mb-2">Age</label>
+              <input type="number"
+                class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition
+                  duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400" />
+            </div>
+            <!-- Password -->
+            <div class="mb-3">
+              <label class="inline-block mb-2">Password</label>
+              <input type="password"
+                class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition
+                  duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400"
+                placeholder="Password" />
+            </div>
+            <!-- Confirm Password -->
+            <div class="mb-3">
+              <label class="inline-block mb-2">Confirm Password</label>
+              <input type="password"
+                class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition
+                  duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400"
+                placeholder="Confirm Password" />
+            </div>
+            <!-- Phone Number -->
+            <div class="mb-3">
+              <label class="inline-block mb-2">Phone Number</label>
+              <input type="text"
+                class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition
+                  duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400"
+                placeholder="Enter Phone Number" />
+            </div>
+            <!-- TOS -->
+            <div class="mb-3 pl-6">
+              <input type="checkbox" class="w-4 h-4 float-left -ml-6 mt-1 rounded" />
+              <label class="inline-block">Accept terms of service</label>
+            </div>
+            <button type="submit"
+              class="block w-full bg-indigo-400 text-white py-1.5 px-3 rounded transition
+                hover:bg-indigo-500 disabled:opacity-50">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

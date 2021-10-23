@@ -1,0 +1,61 @@
+<!-- Top Bar -->
+<section class="container mx-auto my-8 bg-secondary p-6">
+  <div class="rounded relative flex justify-between">
+    <a routerLink="/upload" class="bg-indigo-400 text-white py-4 px-10 text-xl">
+      Upload Videos
+    </a>
+    
+    <!-- Sort Videos -->
+    <select (change)="sort($event)"
+      class="text-black px-8 text-xl outline-none appearance-none">
+      <option value="1" [selected]="videoOrder === '1'">Recent Uploads</option>
+      <option value="2" [selected]="videoOrder === '2'">Oldest Uploads</option>
+    </select>
+  </div>
+</section>
+
+<!-- User's Video Section -->
+<div class="container mx-auto my-8">
+  <!-- Video List -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+    <div *ngFor="let clip of clips"
+      class="mt-6 rounded-tl-2xl rounded-br-2xl shadow-xl bg-secondary flex flex-col justify-start">
+
+      <!-- Image -->
+      <a href="#">
+        <img class="card-img-top rounded-tl-2xl w-full" 
+          [src]="clip.screenshotURL" crossorigin>
+      </a>
+
+      <!-- Body -->
+      <div class="p-6 text-2xl">
+
+        <!-- Link -->
+        <a [routerLink]="['/', 'clip', clip.docID]" 
+          class="font-bold mb-2">
+          {{ clip.title }}
+        </a>
+        <a (click)="copyToClipboard($event, clip.docID)" 
+          href="#" class="bg-gray-400 text-white px-2 py-1 ml-2 text-sm rounded">
+          Copy Link
+        </a>
+
+      </div>
+
+      <!-- Actions -->
+      <div class="flex text-center text-2xl bg-gray-800 p-2 mt-auto">
+        <a (click)="openModal($event, clip)" 
+          href="#" class="flex-1 p-2 border-right border-r-2 border-gray-700 transition hover:text-indigo-400">
+          <span class="material-icons text-base">build</span>
+        </a>
+        <a (click)="deleteClip($event, clip)" href="#" class="flex-1 p-2 rounded-br-2xl transition hover:text-indigo-400">
+          <span class="material-icons text-base">delete</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<app-edit [activeClip]="activeClip"
+  (update)="update($event)"></app-edit>

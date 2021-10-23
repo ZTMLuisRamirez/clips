@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clipz Template</title>
+
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="custom.css" rel="stylesheet">
+</head>
+<body class="bg-main text-gray-200">
+  <!-- Header -->
+  <header id="header" class="bg-secondary">
+    <nav class="container mx-auto flex justify-start items-center py-8 px-4">
+      <!-- App Name -->
+      <a class="text-3xl text-indigo-400 font-bold uppercase mr-4" href="index.html">Clipz</a>
+
+      <div class="flex flex-grow items-center">
+        <!-- Primary Navigation -->
+        <ul class="flex flex-row mt-1">
+          <!-- Navigation Links -->
+          <li>
+            <a class="px-2" href="#">Login / Register</a>
+          </li>
+          <li>
+            <a class="px-2" href="#">Manage</a>
+          </li>
+          <li>
+            <a class="px-2" href="#">Upload</a>
+          </li>
+          <li>
+            <a class="px-2" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- Main Content -->
+  <section class="container mx-auto my-8 bg-secondary p-6">
+    <div class="rounded relative flex flex-col">
+      <div class="font-bold mb-6">Upload Video</div>
+
+      <!-- Upload Dropbox -->
+      <div
+        class="w-full px-10 py-40 rounded text-center cursor-pointer border border-dashed
+          border-gray-400 transition duration-500 hover:text-white
+          hover:bg-indigo-400 hover:border-indigo-400 hover:border-solid text-xl">
+        <h5>Drop your file here (mp4 only!)</h5>
+      </div>
+
+      <!-- Video Editor -->
+      <div>
+
+        <!-- Form -->
+        <form>
+          <!-- Screenshots -->
+          <h2 class="mb-4 text-xl">Select a Thumbnail</h2>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <div class="border-8 cursor-pointer border-green-400">
+              <img src="assets/img/1.jpg">
+            </div>
+            <div class="border-8 cursor-pointer border-transparent">
+              <img src="assets/img/2.jpg">
+            </div>
+            <div class="border-8 cursor-pointer border-transparent">
+              <img src="assets/img/3.jpg">
+            </div>
+          </div>
+
+          <!-- Title -->
+          <div class="mt-4">
+            <label class="block text-xl mb-4">Title</label>
+            <input type="text" class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition
+            duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400">
+          </div>
+
+          <div class="mt-4 text-right">
+            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none">
+              Publish
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+</body>
+</html>

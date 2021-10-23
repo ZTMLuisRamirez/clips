@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clipz Template</title>
+
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/@videojs/themes@1/dist/forest/index.css" rel="stylesheet" />
+  <link href="custom.css" rel="stylesheet">
+</head>
+<body class="bg-main text-gray-200">
+  <!-- Header -->
+  <header id="header" class="bg-secondary">
+    <nav class="container mx-auto flex justify-start items-center py-8 px-4">
+      <!-- App Name -->
+      <a class="text-3xl text-indigo-400 font-bold uppercase mr-4" href="index.html">Clipz</a>
+
+      <div class="flex flex-grow items-center">
+        <!-- Primary Navigation -->
+        <ul class="flex flex-row mt-1">
+          <!-- Navigation Links -->
+          <li>
+            <a class="px-2" href="#">Login / Register</a>
+          </li>
+          <li>
+            <a class="px-2" href="#">Manage</a>
+          </li>
+          <li>
+            <a class="px-2" href="#">Upload</a>
+          </li>
+          <li>
+            <a class="px-2" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- Main content -->
+  <div class="relative m-auto left-0 right-0 z-10 w-36 h-52 border-indigo-400 border-4 top-32 ghost">
+    <span class="absolute left-0 right-0 bottom-10 m-auto text-center text-4xl font-bold">404</span>
+    <!-- Eyes -->
+    <div class="rounded-full absolute left-0 right-0 w-3 h-3 bg-indigo-400 mx-auto mt-10 transform translate-x-6"></div>
+    <div class="rounded-full absolute left-0 right-0 w-3 h-3 bg-indigo-400 mx-auto mt-10 transform -translate-x-6"></div>
+    
+    <!-- Mouth -->
+    <div class="w-10 h-2 rounded-lg absolute left-0 right-0 mx-auto mt-20 bg-indigo-400"></div>
+    
+    <!-- Tail -->
+    <div class="corner border-indigo-400 border-4"></div>
+    <div class="corner two border-indigo-400 border-4"></div>
+    <div class="corner three border-indigo-400 border-4"></div>
+    <div class="corner four border-indigo-400 border-4"></div>
+    
+    <div class="over"></div>
+    <div class="over two"></div>
+    <div class="over three"></div>
+    <div class="over four"></div>
+    
+    <!-- Shadow -->
+    <div class="ghost-shadow w-32 h-10 mx-auto mt-56 rounded bg-indigo-400 left-0 right-0 absolute"></div>
+  </div>
+
+  <div class="container mx-auto text-center mt-60">
+    <h2 class="text-4xl font-bold mb-4">Page not found</h2>
+    <p>
+      Looks like the page you're looking for is gone or doesn't exist.
+    </p>
+  </div>
+
+  <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+</body>
+</html>
