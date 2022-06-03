@@ -32,10 +32,9 @@ export class RegisterComponent {
   ])
   password = new  FormControl('', [
     Validators.required,
-    Validators.pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm)
+    Validators.pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/)
   ])
   confirm_password = new FormControl('', [
-    Validators.required
   ])
   phoneNumber = new FormControl('', [
     Validators.required,
@@ -46,33 +45,9 @@ export class RegisterComponent {
   alertMsg = 'Please wait! Your account is being created.'
   alertColor = 'blue'
 
-  registerForm = new FormGroup({
-    name: this.name,
-    email: this.email,
-    age: this.age,
-    password: this.password,
-    confirm_password: this.confirm_password,
-    phoneNumber: this.phoneNumber
-  }, [RegisterValidators.match('password', 'confirm_password')])
-
-  async register() {
+  register() {
     this.showAlert = true
     this.alertMsg = 'Please wait! Your account is being created.'
     this.alertColor = 'blue'
-    this.inSubmission = true
-
-    try {
-      await this.auth.createUser(this.registerForm.value)
-    } catch(e) {
-      console.error(e)
-
-      this.alertMsg = 'An unexpected error occurred. Please try again later'
-      this.alertColor = 'red'
-      this.inSubmission = false
-      return
-    }
-
-    this.alertMsg = 'Success! Your account has been created.'
-    this.alertColor = 'green'
   }
 }

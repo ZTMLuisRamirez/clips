@@ -10,18 +10,17 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~12.2.0",
-    "@angular/common": "~12.2.0",
-    "@angular/compiler": "~12.2.0",
-    "@angular/core": "~12.2.0",
+    "@angular/animations": "~13.2.3",
+    "@angular/common": "~13.2.3",
+    "@angular/compiler": "~13.2.3",
+    "@angular/core": "~13.2.3",
     "@angular/fire": "^7.1.0",
-    "@angular/forms": "~12.2.0",
-    "@angular/platform-browser": "~12.2.0",
-    "@angular/platform-browser-dynamic": "~12.2.0",
-    "@angular/router": "~12.2.0",
+    "@angular/forms": "~13.2.3",
+    "@angular/platform-browser": "~13.2.3",
+    "@angular/platform-browser-dynamic": "~13.2.3",
+    "@angular/router": "~13.2.3",
     "@ffmpeg/core": "^0.10.0",
     "@ffmpeg/ffmpeg": "^0.10.1",
-    "@tailwindcss/aspect-ratio": "^0.3.0",
     "@types/uuid": "^8.3.1",
     "@types/video.js": "^7.3.27",
     "@videojs/themes": "^1.0.1",
@@ -35,9 +34,9 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~12.2.7",
-    "@angular/cli": "~12.2.7",
-    "@angular/compiler-cli": "~12.2.0",
+    "@angular-devkit/build-angular": "~13.2.3",
+    "@angular/cli": "~13.2.3",
+    "@angular/compiler-cli": "~13.2.3",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.20.33",
     "jasmine-core": "~3.8.0",
@@ -46,7 +45,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
-    "tailwindcss": "^2.2.16",
-    "typescript": "~4.3.5"
+    "tailwindcss": "^3.0.23",
+    "typescript": "~4.4.4"
   }
 }
