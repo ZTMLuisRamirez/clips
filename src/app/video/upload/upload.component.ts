@@ -1,5 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { AngularFireStorage, AngularFireUploadTask } from '@angular/fire/compat/storage';
 import { v4 as uuid } from 'uuid'
 import { switchMap } from 'rxjs/operators';
@@ -31,11 +31,11 @@ export class UploadComponent implements OnDestroy {
   selectedScreenshot = ''
   screenshotTask?: AngularFireUploadTask
 
-  title = new FormControl('', [
+  title = new UntypedFormControl('', [
     Validators.required,
     Validators.minLength(3)
   ])
-  uploadForm = new FormGroup({
+  uploadForm = new UntypedFormGroup({
     title: this.title
   })
 

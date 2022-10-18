@@ -4,7 +4,7 @@ import {
 } from '@angular/core';
 import { ModalService } from 'src/app/services/modal.service';
 import IClip from 'src/app/models/clip.model';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { ClipService } from 'src/app/services/clip.service';
 
 @Component({
@@ -20,12 +20,12 @@ export class EditComponent implements OnInit, OnDestroy, OnChanges {
   alertMsg = 'Please wait! Updating clip.'
   @Output() update = new EventEmitter()
 
-  clipID = new FormControl('')
-  title = new FormControl('', [
+  clipID = new UntypedFormControl('')
+  title = new UntypedFormControl('', [
     Validators.required,
     Validators.minLength(3)
   ])
-  editForm = new FormGroup({
+  editForm = new UntypedFormGroup({
     title: this.title,
     id: this.clipID
   })
