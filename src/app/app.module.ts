@@ -5,17 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserModule } from './user/user.module';
 import { NavComponent } from './nav/nav.component';
-import { AngularFireModule } from '@angular/fire/compat'
+import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
-import { AngularFireAuthModule } from '@angular/fire/compat/auth'
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component'
+import { AboutComponent } from './about/about.component';
 import { ClipComponent } from './clip/clip.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { ClipsListComponent } from './clips-list/clips-list.component';
-import { FbTimestampPipe } from './pipes/fb-timestamp.pipe'
+import { FbTimestampPipe } from './pipes/fb-timestamp.pipe';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { FbTimestampPipe } from './pipes/fb-timestamp.pipe'
     ClipComponent,
     NotFoundComponent,
     ClipsListComponent,
-    FbTimestampPipe
+    FbTimestampPipe,
   ],
   imports: [
     BrowserModule,
@@ -35,9 +36,9 @@ import { FbTimestampPipe } from './pipes/fb-timestamp.pipe'
     AngularFireAuthModule,
     AngularFirestoreModule,
     AppRoutingModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [AuthService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

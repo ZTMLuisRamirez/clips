@@ -1,6 +1,6 @@
-# Clips
+# Zero to Mastery: Complete Angular Developer in 2023
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
+This repo contains the source files to accompany the Angular course found at [zerotomastery.io](https://zerotomastery.io/courses/learn-angular/).
 
 ## Development server
 

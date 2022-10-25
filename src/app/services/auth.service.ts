@@ -6,9 +6,9 @@ import {
 } from '@angular/fire/compat/firestore';
 import { Observable, of } from 'rxjs';
 import IUser from '../models/user.model';
-import { delay, map, filter, switchMap } from 'rxjs/operators';
+import { delay, map, filter, mergeMap } from 'rxjs/operators';
 import { Router } from '@angular/router';
-import { ActivatedRoute, NavigationEnd } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, ActivationEnd } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -31,8 +31,14 @@ export class AuthService {
     this.router.events
       .pipe(
         filter((e) => e instanceof NavigationEnd),
-        map((e) => this.route.firstChild),
-        switchMap((route) => route?.data ?? of({}))
+        map(() => this.route),
+        map((route) => {
+          while (route.firstChild) {
+            route = route.firstChild;
+          }
+          return route;
+        }),
+        mergeMap((route) => route.data)
       )
       .subscribe((data) => {
         this.redirect = data.authOnly ?? false;
