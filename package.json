@@ -18,6 +18,7 @@
     "@angular/platform-browser": "latest",
     "@angular/platform-browser-dynamic": "latest",
     "@angular/router": "latest",
+    "ngx-mask": "latest",
     "rxjs": "latest",
     "tslib": "latest",
     "zone.js": "latest"

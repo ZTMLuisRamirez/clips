@@ -1,0 +1,67 @@
+@if (showAlert()) {
+<app-alert [color]="alertColor()">{{ alertMsg() }}</app-alert>
+}
+
+<!-- Registration Form -->
+<form [formGroup]="form" (ngSubmit)="register()">
+  <!-- Name -->
+  <div class="mb-3">
+    <label class="inline-block mb-2">Name</label>
+    <app-input
+      placeholder="Enter Name"
+      [control]="form.controls.name"
+    ></app-input>
+  </div>
+  <!-- Email -->
+  <div class="mb-3">
+    <label class="inline-block mb-2">Email</label>
+    <app-input
+      [control]="form.controls.email"
+      type="email"
+      placeholder="Enter Email"
+    ></app-input>
+  </div>
+  <!-- Age -->
+  <div class="mb-3">
+    <label class="inline-block mb-2">Age</label>
+    <app-input
+      [control]="form.controls.age"
+      type="number"
+      placeholder="Enter Age"
+    ></app-input>
+  </div>
+  <!-- Password -->
+  <div class="mb-3">
+    <label class="inline-block mb-2">Password</label>
+    <app-input
+      [control]="form.controls.password"
+      type="password"
+      placeholder="Enter Password"
+    ></app-input>
+  </div>
+  <!-- Confirm Password -->
+  <div class="mb-3">
+    <label class="inline-block mb-2">Confirm Password</label>
+    <app-input
+      [control]="form.controls.confirmPassword"
+      type="password"
+      placeholder="Confirm Password"
+    ></app-input>
+  </div>
+  <!-- Phone Number -->
+  <div class="mb-3">
+    <label class="inline-block mb-2">Phone Number</label>
+    <app-input
+      [control]="form.controls.phoneNumber"
+      placeholder="Enter Phone Number"
+      format="(000)000-0000"
+    ></app-input>
+  </div>
+  <button
+    type="submit"
+    class="block w-full bg-indigo-400 text-white py-1.5 px-3 rounded transition hover:bg-indigo-500 disabled:opacity-50 disabled:bg-indigo-400"
+    [disabled]="!form.valid"
+  >
+    Submit
+  </button>
+</form>

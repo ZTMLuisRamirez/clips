@@ -1,0 +1,32 @@
+<input
+  [type]="type()"
+  class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400"
+  [placeholder]="placeholder()"
+  [formControl]="control()"
+  [mask]="format()"
+  [dropSpecialCharacters]="false"
+/>
+
+@if(control().touched && control().dirty) { @if (
+control().hasError('required')) {
+<p class="text-red-400">Field is required.</p>
+} @if (control().hasError('minlength')) {
+<p class="text-red-400">
+  The value you inputted is
+  {{ control().getError("minlength").actualLength }}
+  characters long. It must be at least
+  {{ control().getError("minlength").requiredLength }}
+  characters long.
+</p>
+} @if (control().hasError('email')) {
+<p class="text-red-400">You must enter a valid email.</p>
+} @if (control().hasError('min')) {
+<p class="text-red-400">Value too low.</p>
+} @if (control().hasError('max')) {
+<p class="text-red-400">Value too high.</p>
+} @if(control().hasError('pattern')) {
+<p class="text-red-400">
+  Passwords must be at least 8 characters long, have 1 uppercase letter, 1
+  lowercase letter, and 1 number.
+</p>
+} }
