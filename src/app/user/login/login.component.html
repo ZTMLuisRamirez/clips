@@ -1,5 +1,5 @@
 <!-- Login Form -->
-<form>
+<form #loginForm="ngForm" (ngSubmit)="login()">
   <!-- Email -->
   <div class="mb-3">
     <label class="inline-block mb-2">Email</label>
@@ -7,7 +7,15 @@
       type="email"
       class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400"
       placeholder="Enter Email"
+      name="email"
+      [(ngModel)]="credentials.email"
+      required
+      pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+      #email="ngModel"
     />
+    @if(email.errors && email.touched && email.dirty) {
+    <p class="text-red-400">Email is invalid.</p>
+    }
   </div>
   <!-- Password -->
   <div class="mb-3">
@@ -16,11 +24,19 @@
       type="password"
       class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400"
       placeholder="Password"
+      [(ngModel)]="credentials.password"
+      name="password"
+      required
+      #password="ngModel"
     />
+    @if(password.errors && password.touched && password.dirty) {
+    <p class="text-red-400">Password is invalid.</p>
+    }
   </div>
   <button
     type="submit"
     class="block w-full bg-indigo-400 text-white py-1.5 px-3 rounded transition hover:bg-indigo-500 disabled:opacity-50 disabled:bg-indigo-400"
+    [disabled]="!loginForm.valid"
   >
     Submit
   </button>
