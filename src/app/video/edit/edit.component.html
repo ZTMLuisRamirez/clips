@@ -1,0 +1,36 @@
+<!-- Edit Modal -->
+<app-modal id="editClip">
+  <p class="text-2xl font-bold" heading>Edit Video</p>
+
+  @if(showAlert()) {
+  <app-alert [color]="alertColor()">
+    <p>{{ alertMsg() }}</p>
+  </app-alert>
+  }
+
+  <!-- Form -->
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <!-- Title -->
+    <div class="mt-4">
+      <label class="block text-xl mb-4">Title</label>
+      <app-input
+        [control]="form.controls.title"
+        placeholder="Enter Title"
+      ></app-input>
+    </div>
+
+    <div class="mt-4 text-right">
+      <button
+        type="submit"
+        class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm rounded-md text-white bg-indigo-600 focus:outline-none"
+        [disabled]="inSubmission()"
+        [ngClass]="{
+          'opacity-50': inSubmission(),
+          'hover:bg-indigo-700': !inSubmission()
+        }"
+      >
+        Update
+      </button>
+    </div>
+  </form>
+</app-modal>

@@ -3,14 +3,33 @@
     <div class="font-bold mb-6">Upload Video</div>
 
     <!-- Upload Dropbox -->
+    @if (!nextStep()) {
     <div
+      app-event-blocker
+      (dragend)="isDragover.set(false)"
+      (dragover)="isDragover.set(true)"
+      (dragenter)="isDragover.set(true)"
+      (dragleave)="isDragover.set(false)"
+      (mouseleave)="isDragover.set(false)"
+      (drop)="storeFile($event)"
+      [ngClass]="{
+        'bg-indigo-400 border-indigo-400 border-solid': isDragover()
+      }"
       class="w-full px-10 py-40 rounded text-center cursor-pointer border border-dashed border-gray-400 transition duration-500 hover:text-white hover:bg-indigo-400 hover:border-indigo-400 hover:border-solid text-xl"
     >
       <h5>Drop your file here (mp4 only!)</h5>
     </div>
+    } @else { @if(showAlert()) {
+    <app-alert [color]="alertColor()">
+      <p>{{ alertMsg() }}</p>
+      @if (showPercentage()) {
+      <p>{{ percentage() | percent }}</p>
+      }
+    </app-alert>
+    }
 
     <!-- Form -->
-    <form>
+    <form [formGroup]="form" (ngSubmit)="uploadFile()">
       <!-- Screenshots -->
       <h2 class="mb-4 text-xl">Select a Thumbnail</h2>
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
@@ -28,20 +47,26 @@
       <!-- Title -->
       <div class="mt-4">
         <label class="block text-xl mb-4">Title</label>
-        <input
-          type="text"
-          class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400"
-        />
+        <app-input
+          [control]="form.controls.title"
+          placeholder="Enter Title"
+        ></app-input>
       </div>
 
       <div class="mt-4 text-right">
         <button
           type="submit"
-          class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none"
+          class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm rounded-md text-white bg-indigo-600 focus:outline-none"
+          [disabled]="inSubmission()"
+          [ngClass]="{
+            'opacity-50': inSubmission(),
+            'hover:bg-indigo-700': !inSubmission()
+          }"
         >
           Publish
         </button>
       </div>
     </form>
+    }
   </div>
 </section>

@@ -24,6 +24,7 @@
 <div class="container mx-auto my-8">
   <!-- Video List -->
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+    @for(clip of orderedClips(); track clip.docID) {
     <div
       class="mt-6 rounded-tl-2xl rounded-br-2xl shadow-xl bg-secondary flex flex-col justify-start"
     >
@@ -38,7 +39,7 @@
       <!-- Body -->
       <div class="p-6 text-2xl">
         <!-- Link -->
-        <a href="#" class="font-bold mb-2"> Game Highlighting Clip </a>
+        <a href="#" class="font-bold mb-2">{{ clip.title }}</a>
         <a
           href="#"
           class="bg-gray-400 text-white px-2 py-1 ml-2 text-sm rounded"
@@ -50,239 +51,54 @@
       <!-- Actions -->
       <div class="flex text-center text-2xl bg-gray-800 p-2 mt-auto">
         <a
+          (click)="openModal($event, clip)"
           href="#"
           class="flex-1 p-2 border-right border-r-2 border-gray-700 transition hover:text-indigo-400"
         >
-          <span class="material-icons text-base">build</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6 mx-auto"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21.75 6.75a4.5 4.5 0 0 1-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 1 1-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 0 1 6.336-4.486l-3.276 3.276a3.004 3.004 0 0 0 2.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852Z"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4.867 19.125h.008v.008h-.008v-.008Z"
+            />
+          </svg>
         </a>
         <a
+          (click)="deleteClip($event, clip)"
           href="#"
           class="flex-1 p-2 rounded-br-2xl transition hover:text-indigo-400"
         >
-          <span class="material-icons text-base">delete</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6 mx-auto"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"
+            />
+          </svg>
         </a>
       </div>
     </div>
-    <div
-      class="mt-6 rounded-tl-2xl rounded-br-2xl shadow-xl bg-secondary flex flex-col justify-start"
-    >
-      <!-- Image -->
-      <a href="#">
-        <img
-          class="card-img-top rounded-tl-2xl w-full"
-          src="assets/img/1.jpg"
-        />
-      </a>
-
-      <!-- Body -->
-      <div class="p-6 text-2xl">
-        <!-- Link -->
-        <a href="#" class="font-bold mb-2"> Game Highlighting Clip </a>
-        <a
-          href="#"
-          class="bg-gray-400 text-white px-2 py-1 ml-2 text-sm rounded"
-        >
-          Copy Link
-        </a>
-      </div>
-
-      <!-- Actions -->
-      <div class="flex text-center text-2xl bg-gray-800 p-2 mt-auto">
-        <a
-          href="#"
-          class="flex-1 p-2 border-right border-r-2 border-gray-700 transition hover:text-indigo-400"
-        >
-          <span class="material-icons text-base">build</span>
-        </a>
-        <a
-          href="#"
-          class="flex-1 p-2 rounded-br-2xl transition hover:text-indigo-400"
-        >
-          <span class="material-icons text-base">delete</span>
-        </a>
-      </div>
-    </div>
-    <div
-      class="mt-6 rounded-tl-2xl rounded-br-2xl shadow-xl bg-secondary flex flex-col justify-start"
-    >
-      <!-- Image -->
-      <a href="#">
-        <img
-          class="card-img-top rounded-tl-2xl w-full"
-          src="assets/img/1.jpg"
-        />
-      </a>
-
-      <!-- Body -->
-      <div class="p-6 text-2xl">
-        <!-- Link -->
-        <a href="#" class="font-bold mb-2"> Game Highlighting Clip </a>
-        <a
-          href="#"
-          class="bg-gray-400 text-white px-2 py-1 ml-2 text-sm rounded"
-        >
-          Copy Link
-        </a>
-      </div>
-
-      <!-- Actions -->
-      <div class="flex text-center text-2xl bg-gray-800 p-2 mt-auto">
-        <a
-          href="#"
-          class="flex-1 p-2 border-right border-r-2 border-gray-700 transition hover:text-indigo-400"
-        >
-          <span class="material-icons text-base">build</span>
-        </a>
-        <a
-          href="#"
-          class="flex-1 p-2 rounded-br-2xl transition hover:text-indigo-400"
-        >
-          <span class="material-icons text-base">delete</span>
-        </a>
-      </div>
-    </div>
-    <div
-      class="mt-6 rounded-tl-2xl rounded-br-2xl shadow-xl bg-secondary flex flex-col justify-start"
-    >
-      <!-- Image -->
-      <a href="#">
-        <img
-          class="card-img-top rounded-tl-2xl w-full"
-          src="assets/img/1.jpg"
-        />
-      </a>
-
-      <!-- Body -->
-      <div class="p-6 text-2xl">
-        <!-- Link -->
-        <a href="#" class="font-bold mb-2"> Game Highlighting Clip </a>
-        <a
-          href="#"
-          class="bg-gray-400 text-white px-2 py-1 ml-2 text-sm rounded"
-        >
-          Copy Link
-        </a>
-      </div>
-
-      <!-- Actions -->
-      <div class="flex text-center text-2xl bg-gray-800 p-2 mt-auto">
-        <a
-          href="#"
-          class="flex-1 p-2 border-right border-r-2 border-gray-700 transition hover:text-indigo-400"
-        >
-          <span class="material-icons text-base">build</span>
-        </a>
-        <a
-          href="#"
-          class="flex-1 p-2 rounded-br-2xl transition hover:text-indigo-400"
-        >
-          <span class="material-icons text-base">delete</span>
-        </a>
-      </div>
-    </div>
-    <div
-      class="mt-6 rounded-tl-2xl rounded-br-2xl shadow-xl bg-secondary flex flex-col justify-start"
-    >
-      <!-- Image -->
-      <a href="#">
-        <img
-          class="card-img-top rounded-tl-2xl w-full"
-          src="assets/img/1.jpg"
-        />
-      </a>
-
-      <!-- Body -->
-      <div class="p-6 text-2xl">
-        <!-- Link -->
-        <a href="#" class="font-bold mb-2"> Game Highlighting Clip </a>
-        <a
-          href="#"
-          class="bg-gray-400 text-white px-2 py-1 ml-2 text-sm rounded"
-        >
-          Copy Link
-        </a>
-      </div>
-
-      <!-- Actions -->
-      <div class="flex text-center text-2xl bg-gray-800 p-2 mt-auto">
-        <a
-          href="#"
-          class="flex-1 p-2 border-right border-r-2 border-gray-700 transition hover:text-indigo-400"
-        >
-          <span class="material-icons text-base">build</span>
-        </a>
-        <a
-          href="#"
-          class="flex-1 p-2 rounded-br-2xl transition hover:text-indigo-400"
-        >
-          <span class="material-icons text-base">delete</span>
-        </a>
-      </div>
-    </div>
-    <div
-      class="mt-6 rounded-tl-2xl rounded-br-2xl shadow-xl bg-secondary flex flex-col justify-start"
-    >
-      <!-- Image -->
-      <a href="#">
-        <img
-          class="card-img-top rounded-tl-2xl w-full"
-          src="assets/img/1.jpg"
-        />
-      </a>
-
-      <!-- Body -->
-      <div class="p-6 text-2xl">
-        <!-- Link -->
-        <a href="#" class="font-bold mb-2"> Game Highlighting Clip </a>
-        <a
-          href="#"
-          class="bg-gray-400 text-white px-2 py-1 ml-2 text-sm rounded"
-        >
-          Copy Link
-        </a>
-      </div>
-
-      <!-- Actions -->
-      <div class="flex text-center text-2xl bg-gray-800 p-2 mt-auto">
-        <a
-          href="#"
-          class="flex-1 p-2 border-right border-r-2 border-gray-700 transition hover:text-indigo-400"
-        >
-          <span class="material-icons text-base">build</span>
-        </a>
-        <a
-          href="#"
-          class="flex-1 p-2 rounded-br-2xl transition hover:text-indigo-400"
-        >
-          <span class="material-icons text-base">delete</span>
-        </a>
-      </div>
-    </div>
+    }
   </div>
 </div>
 
-<!-- Edit Modal -->
-<div class="hidden">
-  <p class="text-2xl font-bold">Edit Video</p>
-
-  <!-- Form -->
-  <form>
-    <!-- Title -->
-    <div class="mt-4">
-      <label class="block text-xl mb-4">Title</label>
-      <input
-        placeholder="Enter Title"
-        class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition duration-500 focus:outline-none rounded bg-transparent focus:border-indigo-400"
-      />
-    </div>
-
-    <div class="mt-4 text-right">
-      <button
-        type="submit"
-        class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm rounded-md text-white bg-indigo-600 focus:outline-none"
-      >
-        Update
-      </button>
-    </div>
-  </form>
-</div>
+<app-edit [activeClip]="activeClip()" (update)="update($event)"></app-edit>
