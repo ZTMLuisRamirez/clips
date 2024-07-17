@@ -7,5 +7,7 @@ export interface IClip {
   title: string;
   fileName: string;
   clipURL: string;
+  screenshotURL: string;
+  screenshotFilename: string;
   timestamp: Timestamp;
 }
