@@ -102,4 +102,14 @@ export class ManageComponent implements OnInit {
 
     this.clips.set(currentClips);
   }
+
+  async copyToClipboard($event: MouseEvent, id: string | undefined) {
+    $event.preventDefault();
+
+    const url = `${location.origin}/clip/${id}`;
+
+    await navigator.clipboard.writeText(url);
+
+    alert('Link copied!');
+  }
 }

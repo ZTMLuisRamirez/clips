@@ -1,0 +1,46 @@
+<!-- Clips List -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+  @for(clip of clipService.pageClips(); track clip.docID) {
+  <a
+    [routerLink]="['/', 'clip', clip.docID]"
+    class="mt-6 rounded-tl-2xl rounded-br-2xl shadow-xl bg-secondary transform hover:-translate-y-2 hover:shadow-2xl transition duration-300"
+  >
+    <!-- Image -->
+    <img
+      class="card-img-top rounded-tl-2xl w-full"
+      [src]="clip.screenshotURL"
+      crossorigin
+    />
+
+    <!-- Shape -->
+    <div class="relative">
+      <div
+        class="absolute pointer-events-none bottom-full w-full bg-secondary text-white"
+      >
+        <div class="absolute bottom-full w-full pb-5 overflow-hidden">
+          <svg
+            viewBox="0 0 100 50"
+            preserveAspectRatio="none"
+            class="absolute bottom-0 w-full h-full tranform"
+            style="transform-origin: top center; transform: scale(2)"
+          >
+            <path d="M0 25h25L75 0h25v50H0z" fill="#283046"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Body -->
+    <div class="p-8">
+      <!-- Heading -->
+      <h2 class="text-3xl mb-2">{{ clip.title }}</h2>
+
+      <!-- Name & Date -->
+      <p class="mb-0">
+        {{ clip.displayName }} &#183;
+        <span class="text-gray-400">{{ clip.timestamp | fbTimestamp }}</span>
+      </p>
+    </div>
+  </a>
+  }
+</div>
